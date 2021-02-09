@@ -138,7 +138,7 @@ class Quaternion():
         
         elif inType.lower() == 'rotmat':
             '''Conversion from rotation matrices to quaternions.'''
-            self.values = rotmat2quat(inData)
+            self.values = rotmat.convert(inData, to='quat')
             
         elif inType.lower() == 'euler':
             ''' Conversion from Euler angles to quaternions.
@@ -1023,7 +1023,7 @@ if __name__=='__main__':
                [0, np.sin(0.01), 0]])
     rMat = convert(q, to='rotmat)
     print(rMat[1].reshape((3,3)))
-    qNew = rotmat2quat(rMat)
+    qNew = rotmat.convert(rMat, to='quat')
     print(qNew)
     
     q = Quaternion(np.array([0,0,0.5]))
