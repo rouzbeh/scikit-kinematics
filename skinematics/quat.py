@@ -138,7 +138,7 @@ class Quaternion():
         
         elif inType.lower() == 'rotmat':
             '''Conversion from rotation matrices to quaternions.'''
-            self.values = rotmat.convert(inData, to='quat'
+            self.values = rotmat.convert(inData, to='quat')
             
         elif inType.lower() == 'euler':
             ''' Conversion from Euler angles to quaternions.
