@@ -247,7 +247,7 @@ class IMU_Base(metaclass=abc.ABCMeta):
                 self._calc_orientation()
         else:
             raise ValueError('q_type must be one of the following: ' \
-                             '{0}, not {1}'.format(allowed_values, value))
+                             '{0}, not {1}'.format(allowed_values, type_value))
 
 
     def _set_data(self, data):
